@@ -7,12 +7,12 @@
     <title>CGPA Calculator</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body class="bg-light">
+<body class="bg-primary-subtle">
     <center>
         <div class="col-lg-5 shadow mt-5 bg-white p-3">
             <form id="calculator-form" action="{{ route('calculate') }}" method="post">
                 @csrf
-                <h3 class="fw-bold mb-4">CGPA Calculator</h3>
+                <h3 class="fw-bold mb-4">Diploma CGPA Calculator</h3>
                 <div class="d-flex justify-content-center"> 
                     <label for="regulation" class="mx-2 fw-bold mt-2">Regulation</label>
                     <select  name="regulation" id="regulation" class="form-select w-50" aria-label="Default select example">
@@ -41,12 +41,12 @@
                 </div>
 
                 <div class=" d-flex  justify-content-between mx-3">
-                    <button type="submit" class="btn btn-dark">Calculate</button>
+                    <button type="submit" class="btn btn-primary">CALCULATE</button>
                     @if(session('result'))
-                        <span class="text-success fs-4 fw-bold">Result = {{ session('result') }}</span>
+                        <span class="text-success fs-4 fw-bold">RESULT = {{ session('result') }}</span>
                     @endif
                     
-                    <button id="reset-btn" type="button" class="btn btn-warning">Reset</button>
+                    <button id="reset-btn" type="button" class="btn btn-warning">RESET</button>
                 </div>
             </form>
 
